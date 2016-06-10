@@ -123,6 +123,7 @@ namespace Diamond_Crush
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.ControlBox = false;
             this.Load += new System.EventHandler(this.sign_in_Load);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.esc_Press);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxExit)).EndInit();
