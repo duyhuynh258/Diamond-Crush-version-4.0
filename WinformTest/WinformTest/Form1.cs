@@ -410,7 +410,7 @@ namespace WinformTest
                     }
                     else if (selectedGem._isHorizontalElectric == true)
                     {
-                        horizElectric_green_imgList.Draw(g, selectedGem._location, (int)_whiteGemFrameIndex);
+                        horizElectric_white_imgList.Draw(g, selectedGem._location, (int)_whiteGemFrameIndex);
                     }
                     else
                         white_Selected.Draw(g, selectedGem._location, (int)_whiteGemFrameIndex);
