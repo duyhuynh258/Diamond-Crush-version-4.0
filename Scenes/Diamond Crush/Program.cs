@@ -28,8 +28,8 @@ namespace Diamond_Crush
             }
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            SignIn context = SignIn.Instance();
-            Application.Run(context);
+            Application.Run(SignIn.Instance());
+            
             GC.KeepAlive(mutex);
         }
     }

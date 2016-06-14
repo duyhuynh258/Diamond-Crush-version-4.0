@@ -75,13 +75,17 @@ namespace Diamond_Crush
                     var f = new PreviewLevelScene(i);
                     f.StartPosition = FormStartPosition.CenterParent;
                     f.ShowDialog(this);
-                    if(CDiamondCrushSceneControl._nextScene== CDiamondCrushSceneControl.Scene.PickLevel)
-                    {
-                        this.SetVisibleCore(true);
-                    }
+                    
                     break;
                 }
             }
+            while(CDiamondCrushSceneControl._nextScene == CDiamondCrushSceneControl.Scene.PreviewLevel)
+            {
+                var f = new PreviewLevelScene((int)CLevel._currLevel.LevelID);
+                f.StartPosition = FormStartPosition.CenterParent;
+                f.ShowDialog(this);
+            }
+            this.SetVisibleCore(true);
         }
         public void SetPickLevelSceneVisible(bool Visible)
         {
@@ -93,6 +97,15 @@ namespace Diamond_Crush
             if (lvBoundBox.Contains(new Point(x, y)))
                 return true;
             return false;
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            CDiamondCrushSceneControl._nextScene = CDiamondCrushSceneControl.Scene.Leaderboard;
+            
+            var f = new HighScore();
+            f.StartPosition = FormStartPosition.CenterParent;
+            f.ShowDialog(this);
         }
     }
 }

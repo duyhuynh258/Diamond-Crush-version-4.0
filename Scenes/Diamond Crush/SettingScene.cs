@@ -85,5 +85,10 @@ namespace Diamond_Crush
             //if (this.Visible == true) _testSound.Play();
             //else _testSound.Stop();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("1. Click at a gem to select which to move, then click the next-to gem to swap\n2.If 3 gems or more are grouped by color, they will be explode them and gain score\n3.Some special gems will appear while play, swap two special gem to play skill\n4. When the 5-gem-row or 5-gem-column is excute by swap gems, the final gem appears. Swap them with any swapable gem to play skill\n");
+        }
     }
 }

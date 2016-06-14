@@ -72,6 +72,15 @@
   <ItemGroup>
     <Compile Include="CDiamondCrushSceneControl.cs" />
     <Compile Include="CImageBase.cs" />
+    <Compile Include="Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form3.Designer.cs" />
+    <Compile Include="Form31.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Form3.resx</DependentUpon>
+    </Compile>
     <Compile Include="PreviewLevelScene.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +131,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SignUpScene.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Form3.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Form31.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="PreviewLevelScene.resx">
       <DependentUpon>PreviewLevelScene.cs</DependentUpon>
     </EmbeddedResource>
@@ -417,7 +430,14 @@
     <None Include="Resources\grid_diamond_container_400x400.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\How-to-play.png" />
+    <None Include="Resources\Leaderboard_Button.png" />
+    <None Include="Resources\but_next_75x75.png" />
+    <None Include="Resources\fb_share.png" />
     <Content Include="User.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

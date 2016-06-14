@@ -86,8 +86,12 @@ namespace Diamond_Crush
 
         private void label_playy_Click(object sender, EventArgs e)
         {
-            PickLevelScene.Instance().StartPosition = FormStartPosition.CenterParent;
-            PickLevelScene.Instance().ShowDialog(this);
+            CDiamondCrushSceneControl._nextScene = CDiamondCrushSceneControl.Scene.PickLevel;
+            if (CDiamondCrushSceneControl._nextScene == CDiamondCrushSceneControl.Scene.PickLevel)
+            {
+                PickLevelScene.Instance().StartPosition = FormStartPosition.CenterScreen;
+                PickLevelScene.Instance().ShowDialog(this);
+            }
             this.SetVisibleCore(true);
             
         }

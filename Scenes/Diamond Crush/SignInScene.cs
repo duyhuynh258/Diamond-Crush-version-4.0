@@ -182,12 +182,12 @@ namespace Diamond_Crush
         }
         private void LoginGame()
         {
-            this.Hide();
             this.Username.Text = "";
             this.Password.Text = "";
             this.Username.Select();
             var f = MainMenu.Instance();
             f.StartPosition = FormStartPosition.CenterScreen;
+            this.Hide();
             f.Show();
         }
         public void SetVisible(bool Visible)

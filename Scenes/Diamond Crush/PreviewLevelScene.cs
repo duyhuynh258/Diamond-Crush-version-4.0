@@ -17,8 +17,37 @@ namespace Diamond_Crush
         
         CImageBase _home, _back, _play, _shop;
 
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            var user = CUser.Instance();
+            if (CLevel._currLevel.LevelID<=7)
+            {
+                CLevel._currLevel.LevelID++;
+            }
+            CDiamondCrushSceneControl._nextScene = CDiamondCrushSceneControl.Scene.PreviewLevel;
+            this.Close();
+        }
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            if (CLevel._currLevel.LevelID >0)
+            {
+                CLevel._currLevel.LevelID--;
+            }
+            CDiamondCrushSceneControl._nextScene = CDiamondCrushSceneControl.Scene.PreviewLevel;
+            this.Close();
+        }
+
+        private void PreviewLevelScene_VisibleChanged(object sender, EventArgs e)
+        {
+            //if (CDiamondCrushSceneControl._nextScene == CDiamondCrushSceneControl.Scene.PickLevel&&this.Visible==false)
+            //{
+            //    this.SetVisibleCore(true);
+            //}
+        }
+
         private void PreviewLevelScene_MouseClick(object sender, MouseEventArgs e)
         {
+
             if (_home.IsClicked(e.X, e.Y))
             {
                 MainMenu.Instance().SetMainMenuVisible(true);
@@ -37,6 +66,10 @@ namespace Diamond_Crush
                     var f = new Form1(CLevel._currLevel.LevelID);
                     f.StartPosition = FormStartPosition.CenterParent;
                     f.ShowDialog(this);
+                    if (CLevel._currLevel.LevelID<CUser.Instance()._currLevel)
+                    {
+                        this.pictureBox3.Visible = true;
+                    }
                 }
                 else MessageBox.Show("You need life to play! You will have one more life per 5 minutes in game.");
             }
@@ -50,6 +83,13 @@ namespace Diamond_Crush
         public PreviewLevelScene(int lvID)
         {
             InitializeComponent();
+            if (lvID == 8||lvID ==CUser.Instance()._currLevel)
+            {
+                this.pictureBox3.Visible = false;
+            }else if (lvID == 0)
+            {
+                this.pictureBox4.Visible = false;
+            }
             PickLevelScene.Instance().SetPickLevelSceneVisible(false);
             _home = new CImageBase(Properties.Resources.but_home_75x75) { Left = 10,Top=10};
             _back = new CImageBase(Properties.Resources.but_back_75x75) { Left = 10, Top = 515 };

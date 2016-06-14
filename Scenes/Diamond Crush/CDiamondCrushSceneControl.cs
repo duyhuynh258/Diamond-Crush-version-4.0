@@ -17,7 +17,8 @@ namespace Diamond_Crush
             PreviewLevel,
             Gaming,
             Setting,
-            Shop
+            Shop,
+            Leaderboard
         }
         public static Scene _nextScene{get;set ;}
     }

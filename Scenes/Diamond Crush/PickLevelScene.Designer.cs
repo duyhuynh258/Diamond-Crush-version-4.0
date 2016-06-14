@@ -45,7 +45,9 @@ namespace Diamond_Crush
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PickLevelScene));
             this.picBox_but_home = new System.Windows.Forms.PictureBox();
             this.levelState_imageList = new System.Windows.Forms.ImageList(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.picBox_but_home)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // picBox_but_home
@@ -74,6 +76,17 @@ namespace Diamond_Crush
             this.levelState_imageList.Images.SetKeyName(8, "level_9_unlocked_140x140.png");
             this.levelState_imageList.Images.SetKeyName(9, "level_locked_140x140.png");
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImage = global::Diamond_Crush.Properties.Resources.Leaderboard_Button;
+            this.pictureBox1.Location = new System.Drawing.Point(270, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(200, 53);
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // PickLevelScene
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -81,6 +94,7 @@ namespace Diamond_Crush
             this.BackgroundImage = global::Diamond_Crush.Properties.Resources.ground_cartoon_780x640;
             this.ClientSize = new System.Drawing.Size(764, 602);
             this.ControlBox = false;
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.picBox_but_home);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(780, 640);
@@ -91,6 +105,7 @@ namespace Diamond_Crush
             this.VisibleChanged += new System.EventHandler(this.PickLevelScene_VisibleChanged);
             this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PickLevelScene_MouseClick);
             ((System.ComponentModel.ISupportInitialize)(this.picBox_but_home)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -99,5 +114,6 @@ namespace Diamond_Crush
 
         private System.Windows.Forms.PictureBox picBox_but_home;
         private System.Windows.Forms.ImageList levelState_imageList;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

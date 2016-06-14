@@ -30,8 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SettingScene));
             this.trackBar1 = new System.Windows.Forms.TrackBar();
-            this.fb_logout = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // trackBar1
@@ -43,12 +44,14 @@
             this.trackBar1.Scroll += new System.EventHandler(this.trackBar1_Scroll);
             this.trackBar1.ValueChanged += new System.EventHandler(this.trackBar1_ValueChanged);
             // 
-            // fb_logout
+            // pictureBox1
             // 
-            this.fb_logout.BackgroundImage = global::Diamond_Crush.Properties.Resources.logout_180x50;
-            resources.ApplyResources(this.fb_logout, "fb_logout");
-            this.fb_logout.Name = "fb_logout";
-            this.fb_logout.UseVisualStyleBackColor = true;
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::Diamond_Crush.Properties.Resources.How_to_play;
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // SettingScene
             // 
@@ -56,7 +59,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Diamond_Crush.Properties.Resources.setting_background;
             this.ControlBox = false;
-            this.Controls.Add(this.fb_logout);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.trackBar1);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -66,12 +69,13 @@
             this.VisibleChanged += new System.EventHandler(this.SettingScene_VisibleChanged);
             this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.SettingScene_MouseClick);
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private System.Windows.Forms.TrackBar trackBar1;
-        private System.Windows.Forms.Button fb_logout;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

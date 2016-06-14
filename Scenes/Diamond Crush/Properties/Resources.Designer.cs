@@ -193,6 +193,16 @@ namespace Diamond_Crush.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap but_next_75x75 {
+            get {
+                object obj = ResourceManager.GetObject("but_next_75x75", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap but_play_75x75 {
             get {
                 object obj = ResourceManager.GetObject("but_play_75x75", resourceCulture);
@@ -246,6 +256,16 @@ namespace Diamond_Crush.Properties {
         internal static System.Drawing.Bitmap connect_fb {
             get {
                 object obj = ResourceManager.GetObject("connect_fb", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fb_share {
+            get {
+                object obj = ResourceManager.GetObject("fb_share", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -356,6 +376,26 @@ namespace Diamond_Crush.Properties {
         internal static System.Drawing.Bitmap home {
             get {
                 object obj = ResourceManager.GetObject("home", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap How_to_play {
+            get {
+                object obj = ResourceManager.GetObject("How_to_play", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Leaderboard_Button {
+            get {
+                object obj = ResourceManager.GetObject("Leaderboard_Button", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
