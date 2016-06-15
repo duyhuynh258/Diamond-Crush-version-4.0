@@ -86,7 +86,8 @@ namespace Diamond_Crush
             if (lvID == 8||lvID ==CUser.Instance()._currLevel)
             {
                 this.pictureBox3.Visible = false;
-            }else if (lvID == 0)
+            }
+            if (lvID == 0)
             {
                 this.pictureBox4.Visible = false;
             }
